@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-image: url(img/lodki1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+body{
+    display: flex;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    position: fixed;
+    background-color: #6990d1;
+    justify-content: end;
+    nav{
+        height: 10vh;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        ul{
+            width:90%;
+            display: flex;
+            justify-content: space-around;
+            li{
+                font-family: 'Roboto', sans-serif;
+                flex-direction: row;
+                list-style: none;
+                color: white;
+                text-transform: uppercase;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        color: #c88335;
+                        transition: 0.5s;
+                    }
+                
+}}}}}
+
+main{
+    background-color: rgba(105, 144, 209, 0.5);
+    margin: 0 auto;
+    padding-top: 6%;
+    width: 70%;
+    height: 250vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    h1{
+        font-family: 'Roboto', sans-serif;
+        padding: 5%;
+        font-size: 4em;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2em;
+        padding: 2% 4% 10%;
+        line-height: 2em;
+    }
+    div{
+        height: 50vh;
+        width: 50vw;
+    }
+}
