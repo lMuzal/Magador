@@ -20,14 +20,14 @@ body {
 header {
   width: 100%;
   position: fixed;
-  background-color: #6990d1;
+  background: linear-gradient(-45deg, #57cfb0, #2ab5d3);
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
 }
 
 header nav {
-  height: 10vh;
+  height: 11vh;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,13 +67,13 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #c88335;
+  color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 main {
-  background-color: rgba(105, 144, 209, 0.5);
+  background: rgba(105, 144, 209, 0.5);
   margin: 0 auto;
   padding-top: 6%;
   width: 70%;
@@ -106,8 +106,114 @@ main p {
   line-height: 2em;
 }
 
-main div {
-  height: 50vh;
-  width: 50vw;
+main img {
+  height: 130vh;
+  width: 60vw;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto auto 0;
+}
+
+.loader > div {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-top-color: white;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-animation: rotate 3s infinite linear;
+          animation: rotate 3s infinite linear;
+}
+
+.loader .one {
+  width: 60px;
+  height: 60px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: 7px solid transparent;
+  border-top-color: white;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loader .two {
+  width: 40px;
+  height: 40px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border: 7px solid white;
+  border-top-color: transparent;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  animation-direction: reverse;
+}
+
+.loader .three {
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  border: 7px solid transparent;
+  border-top-color: white;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loader .four {
+  width: 2px;
+  height: 2px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  border: 7px solid white;
+  border-top-color: transparent;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  animation-direction: reverse;
+}
+
+/* @keyframes spin {
+    50%,
+    100% {
+      transform: rotate(10000deg);
+    }
+  } */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader:hover {
+  -webkit-animation: rotate 1s;
+          animation: rotate 1s;
 }
 /*# sourceMappingURL=style.css.map */
