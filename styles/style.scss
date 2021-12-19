@@ -50,11 +50,9 @@ main{
     margin: 0 auto;
     padding-top: 6%;
     width: 70%;
-    height: 250vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    min-width: 300px;
     h1{
         font-family: 'Roboto', sans-serif;
         padding: 5%;
@@ -66,10 +64,13 @@ main{
         padding: 2% 4% 10%;
         line-height: 2em;
     }
-    img{
-        height: 130vh;
-        width: 60vw;
+    div{
+      display: flex;
+      justify-content: center;
+        img{
+        max-width: 90%;
     }
+  }
 }
 
 .loader {
@@ -80,7 +81,7 @@ main{
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 0 auto auto 0;
+    margin: auto 0 0 auto ;
   }
 
   .loader > div {

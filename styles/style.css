@@ -77,7 +77,6 @@ main {
   margin: 0 auto;
   padding-top: 6%;
   width: 70%;
-  height: 250vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,12 +84,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  min-width: 300px;
 }
 
 main h1 {
@@ -106,9 +100,17 @@ main p {
   line-height: 2em;
 }
 
-main img {
-  height: 130vh;
-  width: 60vw;
+main div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main div img {
+  max-width: 90%;
 }
 
 .loader {
@@ -119,7 +121,7 @@ main img {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0 auto auto 0;
+  margin: auto 0 0 auto;
 }
 
 .loader > div {
