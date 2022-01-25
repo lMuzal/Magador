@@ -4,7 +4,7 @@
 }
 
 html {
-  background-image: url(img/lodki1.jpg);
+  background-image: url(img/sunrise-morning-dawn-seascape-seaside-beach-waves-wind-horiz.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -20,7 +20,8 @@ body {
 header {
   width: 100%;
   position: fixed;
-  background: linear-gradient(-45deg, #57cfb0, #2ab5d3);
+  background: -webkit-gradient(linear, right top, left top, from(#9C6664), to(#817ED5));
+  background: linear-gradient(-90deg, #9C6664, #817ED5);
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
@@ -56,9 +57,11 @@ header nav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-size: larger;
   list-style: none;
-  color: white;
   text-transform: uppercase;
+  text-align: center;
+  width: 20%;
 }
 
 header nav ul li a {
@@ -67,13 +70,18 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: black;
+  color: #996A74;
+  font-weight: bold;
+  letter-spacing: 1px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 main {
-  background: rgba(105, 144, 209, 0.5);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(152, 106, 118, 0.7)), to(rgba(134, 123, 196, 0.7)));
+  background: linear-gradient(-90deg, rgba(152, 106, 118, 0.7), rgba(134, 123, 196, 0.7));
   margin: 0 auto;
   padding-top: 6%;
   width: 70%;
@@ -85,12 +93,18 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 300px;
+  min-height: 1000px;
 }
 
 main h1 {
   font-family: 'Roboto', sans-serif;
   padding: 5%;
   font-size: 4em;
+}
+
+main div, main #weather {
+  min-height: 100px;
+  font-size: x-large;
 }
 
 main p {
@@ -187,12 +201,6 @@ main div img {
   animation-direction: reverse;
 }
 
-/* @keyframes spin {
-    50%,
-    100% {
-      transform: rotate(10000deg);
-    }
-  } */
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(-360deg);
@@ -203,6 +211,7 @@ main div img {
             transform: rotate(360deg);
   }
 }
+
 @keyframes rotate {
   from {
     -webkit-transform: rotate(-360deg);
