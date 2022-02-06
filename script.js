@@ -50,7 +50,7 @@ weatherCloseBtn.addEventListener("click", closeOverlay);
 function closeOverlay(){
 
     document.querySelector('#overlay').style.display = "none";
-    window.location.href = "strona_glowna.html";
+    window.location.href = "index.html";
 }
 
 logo.addEventListener("click", logoClick);
