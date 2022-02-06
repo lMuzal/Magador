@@ -9,26 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/40e211c3ba.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-    <nav>
-        <ul>
-            <li><a id = "main" href="strona_glowna.html">Strona Główna</a></li>
-            <li><a id = "rooms" href="pokoje.html">Pokoje</a></li>
-            <li><a id = "gallery" href="galeria.html">Galeria</a></li>
-            <li><a id = "reservations" href="rezerwacje.html">Rezerwacje</a></li>
-            <li><a id = "contact" href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </header>
-    <main>
-            <div class="side-one">
-                <div class="menu-button">
+    <div class ="wrapper">
+        <header>
+        <nav>
+            <ul>
+                <li><a id = "main" href="strona_glowna.html">Strona Główna</a></li>
+                <li><a id = "rooms">Pokoje</a></li>
+                <li><a id = "gallery">Galeria</a></li>
+                <li><a id = "reservations">Rezerwacje</a></li>
+                <li><a id = "contact">Kontakt</a></li>
+            </ul>
+        </header>
+        <main>
+                <div class="side-one">
                 </div>
-            </div>
-            <div class="center">
-                <h1>Wynajem pokoi Maria Muza</h1>
-                <p>Dzień dobry!
+                <div id="center">
+                    <h1>Wynajem pokoi Maria Muza</h1>
+                    <p>Dzień dobry!
                         Na tym profilu pragnę zaprezentować wszystkim ofertę, którą dysponuję.
                         -Dysponuję dwoma pokojami 3-osobowymi, jednym 4-osobowym oraz 2-osobowym, które znajdują się w domu na piętrze.
                         -Wynajmuję również domek, w którym znajdują się dwa pokoje (4-osobowy i 3-osobowy), łazienka z
@@ -36,21 +36,55 @@
                         Serdecznie zapraszam do bardzo bogatej galerii, w której znajdziecie nie tylko liczne zdjęcia pokoi, ale i zdjęcia samych Chałup.
                         Bardzo zapraszam do oglądania.
                         Wszelkie pytania proszę kierować pod adres mail - muza.chalupy@gmail.com lub pod numer tel. 530338561
-                        Gorąco zachęcam do spędzenia wakacji w Chałupach!</p>
-                        <div>
-                <img src="styles/img/dom1.jpg" alt="Dom">
-                        </div>
-            </div>
-            <div class="side-two">
-                <div class="weather-widget"></div>
-            </div>
-    </main>
-    <footer><p>Maria Muza wynajem pokoi</p></footer>
+                        Gorąco zachęcam do spędzenia wakacji w Chałupach!
+                    </p>
+                </div>
+                <div class="side-two">
+                    <div id ="weather-widget">
+                        <div id="description"></div>
+                        <div id="weather-icon"></div>
+                        <div id="temp"></div>
+                            <div id="temp-container">
+                                <div id="temp-min"></div>
+                                <div id="temp-max"></div>
+                            </div>
+                        <div id="temp-feel"></div>
+                        <div id="humidity"></div>
+                        <div id="pressure"></div>
+                    </div>
+                    <div id="weather-button"><p>WINDGURU</p></div>
+                </div>
+        </main>
+        <footer><p>Maria Muza wynajem pokoi</p></footer>
+    </div>
     <div class="loader">
         <div class="one"></div>
         <div class="two"></div>
         <div class="three"></div>
         <div class="four"></div>
+    </div>
+    <div id="overlay">
+        <div id="overlay-close-button"><i class="fas fa-times fa-2x"></i></div>
+        <div id="windguru">
+            <script id="wg_fwdg_500757_100_1644116719586">
+              (function (window, document) {
+                var loader = function () {
+                  var arg = ["s=500757" ,"m=100","uid=wg_fwdg_500757_100_1644116719586" ,"wj=knots" ,"tj=c" ,"waj=m" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=1" ,"vt=forecasts" ,"lng=pl" ,"idbs=1" ,"p=WINDSPD,GUST,SMER,TMP,TMPE,WCHILL,FLHGT,CDC,TCDC,APCP1s,SLP,RH,RATING"];
+                  var script = document.createElement("script");
+                  var tag = document.getElementsByTagName("script")[0];
+                  script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+                  tag.parentNode.insertBefore(script, tag);
+                };
+                window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+              })(window, document);
+              </script>
+          </div>
+        <div class="big-loader">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
