@@ -106,10 +106,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   min-height: 800px;
 }
 
@@ -156,6 +152,10 @@ main #center p {
   text-align: justify;
 }
 
+main #center .mapouter {
+  text-align: center;
+}
+
 main .side-two {
   max-width: 20%;
   min-width: 20%;
@@ -163,6 +163,7 @@ main .side-two {
 
 main .side-two #weather-widget {
   font-family: 'Roboto', sans-serif;
+  text-align: center;
   color: white;
   margin: 10% auto;
   height: 50%;
@@ -198,9 +199,9 @@ main .side-two #weather-widget #temp-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main .side-two #weather-button {

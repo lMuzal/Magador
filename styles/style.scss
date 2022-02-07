@@ -80,8 +80,6 @@ header{
 main{
     margin: 5% auto 0;
     display: flex;
-    flex-direction: row;
-    ;
     min-height: 800px;
       .side-one{
         max-width: 20%;
@@ -121,13 +119,16 @@ main{
               margin: 0 auto;
               text-align: justify;
           }
-
+          .mapouter{
+            text-align: center;
+          }
    }
       .side-two{
         max-width: 20%;
         min-width: 20%;
           #weather-widget{
             font-family: 'Roboto', sans-serif;
+            text-align: center;
             color: white;
             margin: 10% auto;
             height: 50%;
@@ -145,10 +146,11 @@ main{
             align-items: center;
               #temp{
                 font-size: 3rem;
+
               }
               #temp-container{
                 display: flex;
-                align-items: flex-end;
+                justify-content: space-evenly;
           }}
           #weather-button{
             position: sticky;

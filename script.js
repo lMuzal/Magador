@@ -25,13 +25,14 @@ const logo = document.querySelector('.loader');
         .then(function(data){
             console.log(data);
             description.innerHTML = data.weather[0].description;
-            weatherIcon.innerHTML = data.weather[0].icon;
-            tempMin.innerHTML = `Min.<br>${data.main.temp_min}&#8451`;
-            temp.innerHTML = `<span style="font-size: 20px">Temp.</span><br>${data.main.temp}&#8451`;
-            tempMax.innerHTML = `Max.<br>${data.main.temp_max}&#8451`;
-            tempFeel.innerHTML = `Temp. odczuwalna: ${data.main.feels_like}&#8451`;
+            const weatherIcons = data.weather[0].icon;
+            weatherIcon.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherIcons}@2x.png">`;
+            tempMin.innerHTML = `Min.<br>${data.main.temp_min}<span style= "font-family: 'Segoe UI Symbol'">&#8451<span>`;
+            temp.innerHTML = `<span style="font-size: 20px">Temp.</span><br>${data.main.temp}<span style= "font-family: 'Segoe UI Symbol'">&#8451<span>`;
+            tempMax.innerHTML = `Max.<br>${data.main.temp_max}<span style= "font-family: 'Segoe UI Symbol'">&#8451<span>`;
+            tempFeel.innerHTML = `Temp. odczuwalna: ${data.main.feels_like}<span style= "font-family: 'Segoe UI Symbol'">&#8451<span>`;
             humidity.innerHTML = `Wilgotność: ${data.main.humidity} %`;
-            pressure.innerHTML = `Ciśnienie: ${data.main.pressure} Hpa`;
+            pressure.innerHTML = `Ciśnienie: ${data.main.pressure} hPa`;
 
         })
 })();
