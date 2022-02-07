@@ -131,7 +131,8 @@ main{
             text-align: center;
             color: white;
             margin: 10% auto;
-            height: 50%;
+            height: 500px;
+            min-width: 145px;
             width: 90%;
             background-color: rgba(134, 123, 196, 0.5);
             background-image: url(img/tenor_sun.gif);
@@ -145,17 +146,19 @@ main{
             justify-content: space-evenly;
             align-items: center;
               #temp{
+                margin-top: 0%;
                 font-size: 3rem;
 
               }
               #temp-container{
+                width: 100%;
                 display: flex;
                 justify-content: space-evenly;
           }}
           #weather-button{
             position: sticky;
             margin: 10% auto;
-            height: 5%;
+            height: 40px;
             width: 40%;
             background-color: rgba(235, 158, 108, 0.8);
             border-radius: 25px;
