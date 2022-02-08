@@ -10,7 +10,6 @@ const humidity = document.getElementById('humidity');
 const pressure = document.getElementById('pressure');
 const weatherBtn = document.getElementById('weather-button');
 const weatherCloseBtn = document.getElementById('overlay-close-button');
-const roomBtn = document.getElementById('rooms');
 const galleryBtn = document.getElementById('gallery');
 const reservationsBtn = document.getElementById('reservations');
 const contactBtn = document.getElementById('contact');
@@ -51,7 +50,7 @@ weatherCloseBtn.addEventListener("click", closeOverlay);
 function closeOverlay(){
 
     document.querySelector('#overlay').style.display = "none";
-    window.location.href = "index.html";
+    window.location.href = history.back();
 }
 
 logo.addEventListener("click", logoClick);
@@ -67,50 +66,33 @@ function logoClick(){
     }, 3000);
 }
 
-roomBtn.addEventListener('click', loadRooms);
+// GALLERY
 
-function loadRooms() {
-    fetch('rooms.html')
-        .then(function(res) {
-            return res.text();
-        })
-        .then(function(data) {
-            document.getElementById('center').innerHTML = data; 
-        })
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-galleryBtn.addEventListener('click', loadGallery);
-
-function loadGallery() {
-    fetch('gallery.html')
-        .then(function(res) {
-            return res.text();
-        })
-        .then(function(data) {
-            document.getElementById('center').innerHTML = data; 
-        })
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-reservationsBtn.addEventListener('click', loadReservations);
-
-function loadReservations() {
-    fetch('reservations.html')
-        .then(function(res) {
-            return res.text();
-        })
-        .then(function(data) {
-            document.getElementById('center').innerHTML = data; 
-        })
-}
-
-contactBtn.addEventListener('click', loadContact);
-
-function loadContact() {
-    fetch('contact.html')
-        .then(function(res) {
-            return res.text();
-        })
-        .then(function(data) {
-            document.getElementById('center').innerHTML = data; 
-        })
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }

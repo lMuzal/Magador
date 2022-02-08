@@ -1,7 +1,88 @@
-<h1>Kontakt</h1>
-<h3><i class="fas fa-envelope"></i>  E-mail: <a href="mailto:muza.chalupy@gmail.com">muza.chalupy@gmail.com</a></h3>
-<h3><i class="fas fa-phone-alt"></i>  Telefon: 530-338-561</h3>
-<h3><i class="fas fa-home"></i>  Adres: ul. Bosmańska 6, 84-120 Chałupy</h3>
-<br>
-<div class="mapouter"><div class="gmap_canvas"><iframe width="90%" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=bosmansk%206%20cha%C5%82upy%20poland&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wynajem pokoi Maria Muza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40e211c3ba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class ="wrapper">
+        <header>
+        <nav>
+            <ul>
+              <li><a id = "main" href="index.html">Strona Główna</a></li>
+              <li><a id = "gallery" href="gallery.html">Galeria</a></li>
+              <li><a id = "reservations" href="reservations.html">Rezerwacje</a></li>
+              <li><a id = "contact" href="contact.html">Kontakt</a></li>
+            </ul>
+        </header>
+        <main>
+                <div class="side-one">
+                </div>
+                <div id="center">
+                  <h1>Kontakt</h1>
+                  <h3><i class="fas fa-envelope"></i>  E-mail: <a href="mailto:muza.chalupy@gmail.com">muza.chalupy@gmail.com</a></h3>
+                  <h3><i class="fas fa-phone-alt"></i>  Telefon: 530-338-561</h3>
+                  <h3><i class="fas fa-home"></i>  Adres: ul. Bosmańska 6, 84-120 Chałupy</h3>
+                  <br>
+                  <div class="mapouter"><div class="gmap_canvas"><iframe width="90%" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=bosmansk%206%20cha%C5%82upy%20poland&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+                </div>
+                <div class="side-two">
+                    <div id ="weather-widget">
+                        <div id="description"></div>
+                        <div id="weather-icon"></div>
+                        <div id="temp"></div>
+                            <div id="temp-container">
+                                <div id="temp-min"></div>
+                                <div id="temp-max"></div>
+                            </div>
+                        <div id="temp-feel"></div>
+                        <div id="humidity"></div>
+                        <div id="pressure"></div>
+                    </div>
+                    <div id="weather-button"><p>WINDGURU</p></div>
+                </div>
+        </main>
+        <!-- <footer><p>Maria Muza wynajem pokoi</p></footer> -->
+    </div>
+    <div class="loader">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div id="overlay">
+        <div id="overlay-close-button"><i class="fas fa-times fa-2x"></i></div>
+        <div id="windguru">
+            <script id="wg_fwdg_500757_100_1644116719586">
+              (function (window, document) {
+                var loader = function () {
+                  var arg = ["s=500757" ,"m=100","uid=wg_fwdg_500757_100_1644116719586" ,"wj=knots" ,"tj=c" ,"waj=m" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=1" ,"vt=forecasts" ,"lng=pl" ,"idbs=1" ,"p=WINDSPD,GUST,SMER,TMP,TMPE,WCHILL,FLHGT,CDC,TCDC,APCP1s,SLP,RH,RATING"];
+                  var script = document.createElement("script");
+                  var tag = document.getElementsByTagName("script")[0];
+                  script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+                  tag.parentNode.insertBefore(script, tag);
+                };
+                window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+              })(window, document);
+              </script>
+          </div>
+        <div class="big-loader">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
     
+
