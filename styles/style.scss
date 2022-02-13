@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 
+@media screen {
+  
+}
+
 }
 body{
     display: flex;
@@ -20,6 +24,8 @@ header{
     background: linear-gradient(
         -90deg,#9C6664,#817ED5);
     justify-content: end;
+    box-shadow: 0px 0px 6px white;
+
     nav{
         height: 11vh;
         list-style: none;
@@ -91,7 +97,8 @@ main{
           margin: 10% auto;
           height: 40px;
           width: 8%;
-          background-color: rgba(235, 158, 108, 0.8);
+          background-color: rgba(134, 123, 196, 0.8);
+          box-shadow: 0px 0px 6px white;
           border-radius: 25px;
           color: white;
           font-family: 'Roboto', sans-serif;
@@ -165,6 +172,7 @@ main{
             min-width: 145px;
             width: 90%;
             background-color: rgba(134, 123, 196, 0.8);
+            // box-shadow: 0px 0px 6px white;
             position: sticky;
             top: 15%;
             opacity: 0.8;

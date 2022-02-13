@@ -26,6 +26,8 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  -webkit-box-shadow: 0px 0px 6px white;
+          box-shadow: 0px 0px 6px white;
 }
 
 header nav {
@@ -119,7 +121,9 @@ main .side-one #weather-button {
   margin: 10% auto;
   height: 40px;
   width: 8%;
-  background-color: rgba(235, 158, 108, 0.8);
+  background-color: rgba(134, 123, 196, 0.8);
+  -webkit-box-shadow: 0px 0px 6px white;
+          box-shadow: 0px 0px 6px white;
   border-radius: 25px;
   color: white;
   font-family: 'Roboto', sans-serif;
