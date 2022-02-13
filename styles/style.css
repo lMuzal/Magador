@@ -112,12 +112,44 @@ main .side-one {
   min-width: 20%;
 }
 
+main .side-one #weather-button {
+  position: fixed;
+  top: 0;
+  left: 6%;
+  margin: 10% auto;
+  height: 40px;
+  width: 8%;
+  background-color: rgba(235, 158, 108, 0.8);
+  border-radius: 25px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .side-one #weather-button:hover {
+  border-radius: 25px;
+  left: 2%;
+  width: 16%;
+  cursor: pointer;
+}
+
 main #center {
   background: -webkit-gradient(linear, right top, left top, from(rgba(152, 106, 118, 0.7)), to(rgba(134, 123, 196, 0.7)));
   background: linear-gradient(-90deg, rgba(152, 106, 118, 0.7), rgba(134, 123, 196, 0.7));
   min-width: 300px;
   width: 60%;
   margin: 0 auto;
+  color: white;
 }
 
 main #center h1 {
@@ -136,7 +168,7 @@ main #center h3 {
 }
 
 main #center h3 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -166,16 +198,14 @@ main .side-two {
 
 main .side-two #weather-widget {
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   text-align: center;
-  color: white;
+  color: whitesmoke;
   margin: 10% auto;
-  height: 500px;
+  height: 550px;
   min-width: 145px;
   width: 90%;
-  background-color: rgba(134, 123, 196, 0.5);
-  background-image: url(img/tenor_sun.gif);
-  background-image: url(img/39095262rain-nature-animated-gif-20.gif);
-  background-size: cover;
+  background-color: rgba(134, 123, 196, 0.8);
   position: -webkit-sticky;
   position: sticky;
   top: 15%;
@@ -210,33 +240,8 @@ main .side-two #weather-widget #temp-container {
           justify-content: space-evenly;
 }
 
-main .side-two #weather-button {
-  position: -webkit-sticky;
-  position: sticky;
-  margin: 10% auto;
-  height: 40px;
-  width: 40%;
-  background-color: rgba(235, 158, 108, 0.8);
-  border-radius: 25px;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .side-two #weather-button:hover {
-  border-radius: 25px;
-  width: 80%;
-  cursor: pointer;
+main .side-two #weather-widget #wind-dir {
+  font-size: x-large;
 }
 
 footer {
