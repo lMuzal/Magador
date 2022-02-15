@@ -16,14 +16,15 @@
         <header>
         <nav>
             <ul>
-                <li><a id = "main" href="index.html">Strona Główna</a></li>
-                <li><a id = "gallery" href="gallery.html">Galeria</a></li>
-                <li><a id = "reservations" href="reservations.html">Rezerwacje</a></li>
-                <li><a id = "contact" href="contact.html">Kontakt</a></li>
+              <li><a id = "main" href="index.html">Strona Główna</a></li>
+              <li><a id = "gallery" href="gallery.html">Galeria</a></li>
+              <li><a id = "reservations" href="rules.html">Regulamin</a></li>
+              <li><a id = "contact" href="contact.html">Kontakt</a></li>
             </ul>
         </header>
         <main>
                 <div class="side-one">
+                  <div id="weather-button">PROGNOZA WINDGURU</div>
                 </div>
                 <div id="center">
                     <h1>Galeria</h1>
@@ -34,32 +35,28 @@
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <div class="numbertext">1 / 5</div>
-      <img src="styles/img/547544_332738753442676_1214279890_n.jpg" style="width:100%; margin: auto;">
+      <img src="styles/img/547544_332738753442676_1214279890_n.jpg" style="width:100%; max-height: 600px;
+      ">
       <div class="text">Caption Text</div>
     </div>
   
     <div class="mySlides fade">
-      <div class="numbertext">2 / 5</div>
-      <img src="styles/img/547997_332738616776023_1289725556_n.jpg" style="width:100%">
+      <img src="styles/img/547997_332738616776023_1289725556_n.jpg" style="width:100%; max-height: 600px;">
       <div class="text">Caption Two</div>
     </div>
   
     <div class="mySlides fade">
-      <div class="numbertext">3 / 5</div>
-      <img src="styles/img/553723_332734113443140_181727889_n.jpg" style="width:100%">
+      <img src="styles/img/553723_332734113443140_181727889_n.jpg" style="width:100%; max-height: 600px;">
       <div class="text">Caption Three</div>
     </div>
   
     <div class="mySlides fade">
-        <div class="numbertext">4 / 5</div>
-        <img src="styles/img/560011_332739150109303_2036747072_n.jpg" style="width:100%">
+        <img src="styles/img/560011_332739150109303_2036747072_n.jpg" style="width:100%; max-height: 600px;">
         <div class="text">Caption Three</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">5 / 5</div>
-        <img src="styles/img/561797_332734190109799_478160926_n.jpg" style="width:100%">
+        <img src="styles/img/561797_332734190109799_478160926_n.jpg" style="width:100%; max-height: 600px;">
         <div class="text">Caption Three</div>
       </div>
     <!-- Next and previous buttons -->
@@ -76,6 +73,8 @@
     <span class="dot" onclick="currentSlide(4)"></span>
     <span class="dot" onclick="currentSlide(5)"></span>
   </div>
+
+  
                 </div>
                 <div class="side-two">
                     <div id ="weather-widget">
@@ -88,12 +87,12 @@
                             </div>
                         <div id="temp-feel"></div>
                         <div id="humidity"></div>
-                        <div id="pressure"></div>
+                        <div id="pressure"></div>                       
+                        <div id="wind"></div>
+                        <div id="wind-dir"></div>
+
                     </div>
-                    <div id="weather-button"><p>WINDGURU</p></div>
-                </div>
         </main>
-        <footer><p>Maria Muza wynajem pokoi</p></footer>
     </div>
     <div class="loader">
         <div class="one"></div>
