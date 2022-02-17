@@ -85,12 +85,12 @@ header nav ul li a:hover {
   -webkit-text-stroke-color: white;
 }
 
-header nav ul li #rooms:hover {
-  color: #8a77b1;
-}
-
 header nav ul li #gallery:hover {
   color: #8F729B;
+}
+
+header nav ul li #gallery:before {
+  content: "GALERIA";
 }
 
 header nav ul li #reservations:hover {
@@ -106,7 +106,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 800px;
 }
 
 main .side-one {
@@ -145,6 +144,10 @@ main .side-one #weather-button:hover {
           box-shadow: 0px 0px 20px orange;
   color: orange;
   cursor: pointer;
+}
+
+main .side-one #weather-button:before {
+  content: "PROGNOZA WINDGURU";
 }
 
 main #center {
@@ -578,6 +581,12 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #weather-button {
+    margin-top: 20%;
   }
 }
 /*# sourceMappingURL=style.css.map */
