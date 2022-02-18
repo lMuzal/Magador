@@ -102,7 +102,7 @@ header nav ul li #contact:hover {
 }
 
 main {
-  margin: 5% auto 0;
+  margin: 5vw auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,9 +193,55 @@ main #center .mapouter {
   text-align: center;
 }
 
-main #center #carouselExampleIndicators {
-  width: 95%;
+main #center .gallery-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 60px;
+}
+
+main #center .gallery-container img .caption-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
   margin: 0 auto;
+}
+
+main #center .gallery-container #chalepe {
+  max-width: 70%;
+}
+
+main #center .gallery-container #chalepe:hover {
+  cursor: pointer;
+}
+
+main #center .gallery-container #chalepe-zima {
+  max-width: 70%;
+}
+
+main #center .gallery-container #chalepe-zima:hover {
+  cursor: pointer;
+}
+
+main #center .gallery-container #dom {
+  max-width: 70%;
+}
+
+main #center #gallery-one {
+  display: none;
+  width: 50%;
+}
+
+main #center #gallery-two {
+  display: none;
+  width: 50%;
 }
 
 main .side-two {
@@ -249,18 +295,6 @@ main .side-two #weather-widget #temp-container {
 
 main .side-two #weather-widget #wind-dir {
   font-size: x-large;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
-  height: 2rem;
-  width: 100%;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(152, 106, 118, 0.7)), to(rgba(134, 123, 196, 0.7)));
-  background: linear-gradient(-90deg, rgba(152, 106, 118, 0.7), rgba(134, 123, 196, 0.7));
 }
 
 #overlay {
@@ -403,6 +437,13 @@ footer {
           justify-content: center;
   position: fixed;
   cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+#overlay-close-button:hover {
+  background-color: black;
+  color: white;
 }
 
 .loader {
@@ -496,97 +537,35 @@ footer {
   cursor: pointer;
 }
 
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev, .next {
+.display-left, .display-right {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  top: 0%;
+  left: 0%;
+  width: 7%;
+  height: 100%;
   color: white;
+  background-color: transparent;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 4rem;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  border: none;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.display-left:hover, .display-right:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  #weather-button {
-    margin-top: 20%;
-  }
+.display-right {
+  margin: 0 50% 0 0;
+  left: 93%;
+  right: 0%;
 }
 /*# sourceMappingURL=style.css.map */

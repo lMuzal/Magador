@@ -16,6 +16,7 @@ const galleryBtn = document.getElementById('gallery');
 const reservationsBtn = document.getElementById('reservations');
 const contactBtn = document.getElementById('contact');
 const logo = document.querySelector('.loader');
+const galleryCont1 = document.getElementById('chalepe');
 
 
 
@@ -99,7 +100,7 @@ const logo = document.querySelector('.loader');
 weatherBtn.addEventListener("click", windguruForecast);
 
 function windguruForecast(){
-
+    document.querySelector('#gallery-one').style.display = "none";
     document.querySelector('#overlay').style.display = "flex";
     document.querySelector('#windguru').style.display = "block";
 }
@@ -115,9 +116,9 @@ function closeOverlay(){
 logo.addEventListener("click", logoClick);
     
 function logoClick(){
-
+    document.querySelector('#gallery-one').style.display = "none";
     document.querySelector('#windguru').style.display = "none";
-    document.querySelector('#overlay').style.display = "block";
+    document.querySelector('#overlay').style.display = "flex";
     document.querySelector('.big-loader').style.display = "block";
         
     setTimeout(() => {
@@ -125,33 +126,31 @@ function logoClick(){
     }, 3000);
 }
 
-// GALLERY
+// GALLERY 1
 
 var slideIndex = 1;
-showSlides(slideIndex);
+showDivs(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showDivs(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  var x = document.getElementsByClassName("mySlides1");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  x[slideIndex-1].style.display = "block";
+}
+
+galleryCont1.addEventListener("click", galleryEnter1);
+
+function galleryEnter1(){
+
+    document.querySelector('#windguru').style.display = "none";
+    document.querySelector('#overlay').style.display = "flex";
+    document.querySelector('#gallery-one').style.display = "flex";
 }
