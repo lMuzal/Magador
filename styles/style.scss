@@ -155,51 +155,63 @@ main{
             display: grid;
             grid-template-columns: auto auto;
             grid-gap: 60px;
-              img{
-                .caption-text{
-                  position: absolute;
-                  left: 0;
-                  right: 0;
-                  color: #f2f2f2;
-                  font-size: 25px;
-                  padding: 8px 12px;
-                  bottom: 8px;
-                  width: 100%;
-                  text-align: center;
-                  margin: 0 auto;
-              }
-              }
+            justify-items: center;
+            align-items: center;
             
-            #chalepe{
-              max-width: 70%;
-              &:hover{
-                cursor: pointer;
+            div{
+              position: relative;
+              text-align: center;
+              color: white;
+              #chalepe{
+                margin: 0 15%;
+                max-width: 70%;
+                transition: filter 0.5s ease-in-out;
+                &:hover{
+                  cursor: pointer;
+                  filter: blur(1px) brightness(40%);
+                }
+                &:hover + #text-one{
+                  color: white;
+                }
               }
-            }
+              #text-one{
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  color: transparent;
+                  font-family: 'Roboto', sans-serif;
+                  font-size: x-large;
+              }
+          }
             #chalepe-zima{
-              max-width: 70%;
-              &:hover{
-                cursor: pointer;
+              margin: 0 15%;
+                max-width: 70%;
+                transition: filter 0.5s ease-in-out;
+                &:hover{
+                  cursor: pointer;
+                  filter: blur(1px) brightness(40%);
+                }
+                &:hover + #text-two{
+                  color: white;
+                }
               }
+              #text-two{
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  color: transparent;
+                  font-family: 'Roboto', sans-serif;
+                  font-size: x-large;
             }
 
             #dom{
+              margin: 0 15%;
               max-width: 70%;
             }
 
-          }
-
-          #gallery-one{
-            display: none;
-            width: 50%;
-          }
-
-          #gallery-two{
-            display: none;
-            width: 50%;
-          }
-
-          
+          } 
    }
       .side-two{
         max-width: 20%;
@@ -251,7 +263,7 @@ main{
   bottom: 0;
   background-color: rgba(0,0,0,0.8);
   z-index: 2;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
     #windguru{
       width: 90%;
@@ -343,6 +355,7 @@ main{
   align-items: center;
   justify-content: center;
   position: fixed;
+  align-self: flex-start;
   cursor: pointer;
   transition: 0.5s ease;
     &:hover{
@@ -442,8 +455,6 @@ main{
   transition: 0.6s ease;
   user-select: none;
   border: none;
-  // border-right: 2px solid gray;
-
     &:hover{
       background-color: rgba(0, 0, 0, 0.4);
       box-shadow: 0 0 20px white;
@@ -456,11 +467,39 @@ main{
   right: 0%;
 }
 
+#gallery-one{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  div{
+    margin: auto;
+    width: 100%;
+    img{
+      margin: auto;
+      max-width: 90%;
+    }
+  }
+}
+
+#gallery-two{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  div{
+    margin: auto;
+    width: 100%;
+    img{
+      margin: auto;
+      max-width: 90%;
+    }
+  }
+}
+
 @media screen and (max-width: 1900px) {
   #weather-button{
-    margin: 20% auto;
+    margin: 15% auto;
   }
   main{
-    margin-top: 7%;
+    margin-top: 5%;
   }
 }

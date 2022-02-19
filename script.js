@@ -17,6 +17,7 @@ const reservationsBtn = document.getElementById('reservations');
 const contactBtn = document.getElementById('contact');
 const logo = document.querySelector('.loader');
 const galleryCont1 = document.getElementById('chalepe');
+const galleryCont2 = document.getElementById('chalepe-zima');
 
 
 
@@ -101,6 +102,7 @@ weatherBtn.addEventListener("click", windguruForecast);
 
 function windguruForecast(){
     document.querySelector('#gallery-one').style.display = "none";
+    document.querySelector('#gallery-two').style.display = "none";
     document.querySelector('#overlay').style.display = "flex";
     document.querySelector('#windguru').style.display = "block";
 }
@@ -117,6 +119,7 @@ logo.addEventListener("click", logoClick);
     
 function logoClick(){
     document.querySelector('#gallery-one').style.display = "none";
+    document.querySelector('#gallery-two').style.display = "none";
     document.querySelector('#windguru').style.display = "none";
     document.querySelector('#overlay').style.display = "flex";
     document.querySelector('.big-loader').style.display = "block";
@@ -149,8 +152,38 @@ function showDivs(n) {
 galleryCont1.addEventListener("click", galleryEnter1);
 
 function galleryEnter1(){
-
+    document.querySelector('#gallery-two').style.display = "none";
     document.querySelector('#windguru').style.display = "none";
     document.querySelector('#overlay').style.display = "flex";
     document.querySelector('#gallery-one').style.display = "flex";
+}
+
+// GALLERY 2
+
+var slideIndex2 = 1;
+showDivs2(slideIndex2);
+
+function plusDivs2(n) {
+  showDivs2(slideIndex2 += n);
+}
+
+function showDivs2(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides2");
+  if (n > x.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex2-1].style.display = "block";
+}
+
+galleryCont2.addEventListener("click", galleryEnter2);
+
+function galleryEnter2(){
+
+    document.querySelector('#gallery-one').style.display = "none";
+    document.querySelector('#windguru').style.display = "none";
+    document.querySelector('#overlay').style.display = "flex";
+    document.querySelector('#gallery-two').style.display = "flex";
 }

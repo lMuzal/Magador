@@ -199,49 +199,81 @@ main #center .gallery-container {
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
   grid-gap: 60px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main #center .gallery-container img .caption-text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  color: #f2f2f2;
-  font-size: 25px;
-  padding: 8px 12px;
-  bottom: 8px;
-  width: 100%;
+main #center .gallery-container div {
+  position: relative;
   text-align: center;
-  margin: 0 auto;
+  color: white;
 }
 
-main #center .gallery-container #chalepe {
+main #center .gallery-container div #chalepe {
+  margin: 0 15%;
   max-width: 70%;
+  -webkit-transition: -webkit-filter 0.5s ease-in-out;
+  transition: -webkit-filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out;
 }
 
-main #center .gallery-container #chalepe:hover {
+main #center .gallery-container div #chalepe:hover {
   cursor: pointer;
+  -webkit-filter: blur(1px) brightness(40%);
+          filter: blur(1px) brightness(40%);
+}
+
+main #center .gallery-container div #chalepe:hover + #text-one {
+  color: white;
+}
+
+main #center .gallery-container div #text-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
 }
 
 main #center .gallery-container #chalepe-zima {
+  margin: 0 15%;
   max-width: 70%;
+  -webkit-transition: -webkit-filter 0.5s ease-in-out;
+  transition: -webkit-filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out;
 }
 
 main #center .gallery-container #chalepe-zima:hover {
   cursor: pointer;
+  -webkit-filter: blur(1px) brightness(40%);
+          filter: blur(1px) brightness(40%);
+}
+
+main #center .gallery-container #chalepe-zima:hover + #text-two {
+  color: white;
+}
+
+main #center .gallery-container #text-two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
 }
 
 main #center .gallery-container #dom {
+  margin: 0 15%;
   max-width: 70%;
-}
-
-main #center #gallery-one {
-  display: none;
-  width: 50%;
-}
-
-main #center #gallery-two {
-  display: none;
-  width: 50%;
 }
 
 main .side-two {
@@ -308,9 +340,9 @@ main .side-two #weather-widget #wind-dir {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -436,6 +468,8 @@ main .side-two #weather-widget #wind-dir {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   cursor: pointer;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -569,12 +603,52 @@ main .side-two #weather-widget #wind-dir {
   right: 0%;
 }
 
+#gallery-one {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gallery-one div {
+  margin: auto;
+  width: 100%;
+}
+
+#gallery-one div img {
+  margin: auto;
+  max-width: 90%;
+}
+
+#gallery-two {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gallery-two div {
+  margin: auto;
+  width: 100%;
+}
+
+#gallery-two div img {
+  margin: auto;
+  max-width: 90%;
+}
+
 @media screen and (max-width: 1900px) {
   #weather-button {
-    margin: 20% auto;
+    margin: 15% auto;
   }
   main {
-    margin-top: 7%;
+    margin-top: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
